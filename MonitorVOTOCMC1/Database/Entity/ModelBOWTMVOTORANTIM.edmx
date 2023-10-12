@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BOWTMVOTORANTIMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="mc1_CustomerGCCExt">
+          <Key>
+            <PropertyRef Name="cIDCustomer" />
+            <PropertyRef Name="cIDCompany" />
+          </Key>
+          <Property Name="cIDCustomer" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="cIDCustomerParent" Type="varchar" MaxLength="20" />
+          <Property Name="xCodeStatusSync" Type="varchar" MaxLength="20" />
+          <Property Name="dStatusSync" Type="datetime" />
+          <Property Name="xTypeSync" Type="varchar" MaxLength="20" />
+          <Property Name="cGroupAccount" Type="varchar" MaxLength="10" />
+          <Property Name="cDocument" Type="varchar" MaxLength="14" />
+          <Property Name="cStateRegistration" Type="varchar" MaxLength="20" />
+          <Property Name="cCustomerName" Type="varchar" MaxLength="100" />
+          <Property Name="cCustomerFantasyName" Type="varchar" MaxLength="100" />
+          <Property Name="cEmailNfe" Type="varchar" MaxLength="100" />
+          <Property Name="cPhone" Type="varchar" MaxLength="50" />
+          <Property Name="cMobile" Type="varchar" MaxLength="50" />
+          <Property Name="cGroupCustomer" Type="varchar" MaxLength="100" />
+          <Property Name="cCodeTrilha" Type="varchar" MaxLength="20" />
+          <Property Name="cGroupSegmento" Type="varchar" MaxLength="20" />
+          <Property Name="cSegmento" Type="varchar" MaxLength="20" />
+          <Property Name="cGroupCentralizing" Type="varchar" MaxLength="30" />
+          <Property Name="cStreet" Type="varchar" MaxLength="100" />
+          <Property Name="cNumber" Type="varchar" MaxLength="20" />
+          <Property Name="cNeighborhood" Type="varchar" MaxLength="50" />
+          <Property Name="cComplement" Type="varchar" MaxLength="30" />
+          <Property Name="lZipCode" Type="int" />
+          <Property Name="cState" Type="varchar" MaxLength="2" />
+          <Property Name="cCity" Type="varchar" MaxLength="35" />
+          <Property Name="lDischargingSmoke" Type="int" />
+          <Property Name="iDischargingCustomer" Type="int" />
+          <Property Name="iPaletizado" Type="int" />
+          <Property Name="dBirth" Type="datetime" />
+          <Property Name="cFunctionPartner" Type="varchar" MaxLength="20" />
+          <Property Name="cCustomerSAP" Type="varchar" MaxLength="20" />
+          <Property Name="cUser" Type="varchar" MaxLength="20" />
+          <Property Name="cSuframa" Type="varchar" MaxLength="20" />
+          <Property Name="cRegistrationCity" Type="varchar" MaxLength="20" />
+          <Property Name="cFile" Type="text" />
+          <Property Name="cReturnMessage" Type="varchar" MaxLength="140" />
+          <Property Name="xTypeReceiving" Type="varchar" MaxLength="200" />
+          <Property Name="cContacteName" Type="varchar" MaxLength="50" />
+          <Property Name="cLastNameContact" Type="varchar" MaxLength="50" />
+          <Property Name="cOffice" Type="varchar" MaxLength="50" />
+          <Property Name="cContactEmail" Type="varchar" MaxLength="50" />
+          <Property Name="cDepartment" Type="varchar" MaxLength="50" />
+          <Property Name="dLastUpdate" Type="datetime" />
+          <Property Name="dReturnSync" Type="datetime" />
+          <Property Name="mc1Enabled" Type="int" />
+          <Property Name="mc1LastUpdate" Type="datetime" />
+          <Property Name="cContactPhone" Type="varchar" MaxLength="50" />
+          <Property Name="cContactMobile" Type="varchar" MaxLength="50" />
+          <Property Name="cIdCustomerProspect" Type="varchar" MaxLength="20" />
+          <Property Name="dRelationshipSync" Type="datetime" />
+          <Property Name="nValueCreditLimitVC" Type="numeric" Precision="18" Scale="5" />
+          <Property Name="nCreditLimitVC" Type="numeric" Precision="18" Scale="5" />
+          <Property Name="cIDCompany" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="cUserSales" Type="int" />
+          <Property Name="cIdUserSubstitute" Type="varchar" MaxLength="20" />
+          <Property Name="dMigrationSap" Type="datetime" />
+          <Property Name="mc1RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="MC1_Tracking">
+          <Key>
+            <PropertyRef Name="cIDCompany" />
+            <PropertyRef Name="cIDUser" />
+            <PropertyRef Name="cIDTracking" />
+          </Key>
+          <Property Name="cIDCompany" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="cIDUser" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="cIDTracking" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="dCreated" Type="datetime" Nullable="false" />
+          <Property Name="cType" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="nLatitude" Type="numeric" Precision="18" Scale="7" Nullable="false" />
+          <Property Name="nLongitude" Type="numeric" Precision="18" Scale="7" Nullable="false" />
+          <Property Name="cUpdatedTables" Type="text" />
+          <Property Name="cValues" Type="text" />
+          <Property Name="mc1Enabled" Type="int" Nullable="false" />
+          <Property Name="mc1LastUpdate" Type="datetime" Nullable="false" />
+          <Property Name="cIDCustomer" Type="varchar" MaxLength="20" />
+          <Property Name="cIDOrder" Type="varchar" MaxLength="20" />
+          <Property Name="xIDSurvey" Type="varchar" MaxLength="200" />
+          <Property Name="nVersion" Type="int" />
+          <Property Name="cSource" Type="varchar" MaxLength="100" />
+          <Property Name="mc1RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="BOWTMVOTORANTIMModelStoreContainer">
+          <EntitySet Name="mc1_CustomerGCCExt" EntityType="Self.mc1_CustomerGCCExt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MC1_Tracking" EntityType="Self.MC1_Tracking" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BOWTMVOTORANTIMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="mc1_CustomerGCCExt">
+          <Key>
+            <PropertyRef Name="cIDCustomer" />
+            <PropertyRef Name="cIDCompany" />
+          </Key>
+          <Property Name="cIDCustomer" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cIDCustomerParent" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="xCodeStatusSync" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="dStatusSync" Type="DateTime" Precision="3" />
+          <Property Name="xTypeSync" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cGroupAccount" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="cDocument" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="cStateRegistration" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cCustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cCustomerFantasyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cEmailNfe" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cGroupCustomer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cCodeTrilha" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cGroupSegmento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cSegmento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cGroupCentralizing" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="cStreet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cNeighborhood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cComplement" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="lZipCode" Type="Int32" />
+          <Property Name="cState" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="cCity" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="lDischargingSmoke" Type="Int32" />
+          <Property Name="iDischargingCustomer" Type="Int32" />
+          <Property Name="iPaletizado" Type="Int32" />
+          <Property Name="dBirth" Type="DateTime" Precision="3" />
+          <Property Name="cFunctionPartner" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cCustomerSAP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cUser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cSuframa" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cRegistrationCity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="cReturnMessage" Type="String" MaxLength="140" FixedLength="false" Unicode="false" />
+          <Property Name="xTypeReceiving" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="cContacteName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cLastNameContact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cOffice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cContactEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cDepartment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dLastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="dReturnSync" Type="DateTime" Precision="3" />
+          <Property Name="mc1Enabled" Type="Int32" />
+          <Property Name="mc1LastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="cContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cContactMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cIdCustomerProspect" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="dRelationshipSync" Type="DateTime" Precision="3" />
+          <Property Name="nValueCreditLimitVC" Type="Decimal" Precision="18" Scale="5" />
+          <Property Name="nCreditLimitVC" Type="Decimal" Precision="18" Scale="5" />
+          <Property Name="cIDCompany" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cUserSales" Type="Int32" />
+          <Property Name="cIdUserSubstitute" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="dMigrationSap" Type="DateTime" Precision="3" />
+          <Property Name="mc1RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="BOWTMVOTORANTIMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="mc1_CustomerGCCExt" EntityType="Self.mc1_CustomerGCCExt" />
+          <EntitySet Name="MC1_Tracking" EntityType="BOWTMVOTORANTIMModel.MC1_Tracking" />
+        </EntityContainer>
+        <EntityType Name="MC1_Tracking">
+          <Key>
+            <PropertyRef Name="cIDCompany" />
+            <PropertyRef Name="cIDUser" />
+            <PropertyRef Name="cIDTracking" />
+          </Key>
+          <Property Name="cIDCompany" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cIDUser" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cIDTracking" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="dCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="cType" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="nLatitude" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="nLongitude" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="cUpdatedTables" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="cValues" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="mc1Enabled" Type="Int32" Nullable="false" />
+          <Property Name="mc1LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="cIDCustomer" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cIDOrder" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="xIDSurvey" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="nVersion" Type="Int32" />
+          <Property Name="cSource" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="mc1RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BOWTMVOTORANTIMModelStoreContainer" CdmEntityContainer="BOWTMVOTORANTIMEntities">
+          <EntitySetMapping Name="mc1_CustomerGCCExt">
+            <EntityTypeMapping TypeName="BOWTMVOTORANTIMModel.mc1_CustomerGCCExt">
+              <MappingFragment StoreEntitySet="mc1_CustomerGCCExt">
+                <ScalarProperty Name="cIDCustomer" ColumnName="cIDCustomer" />
+                <ScalarProperty Name="cIDCustomerParent" ColumnName="cIDCustomerParent" />
+                <ScalarProperty Name="xCodeStatusSync" ColumnName="xCodeStatusSync" />
+                <ScalarProperty Name="dStatusSync" ColumnName="dStatusSync" />
+                <ScalarProperty Name="xTypeSync" ColumnName="xTypeSync" />
+                <ScalarProperty Name="cGroupAccount" ColumnName="cGroupAccount" />
+                <ScalarProperty Name="cDocument" ColumnName="cDocument" />
+                <ScalarProperty Name="cStateRegistration" ColumnName="cStateRegistration" />
+                <ScalarProperty Name="cCustomerName" ColumnName="cCustomerName" />
+                <ScalarProperty Name="cCustomerFantasyName" ColumnName="cCustomerFantasyName" />
+                <ScalarProperty Name="cEmailNfe" ColumnName="cEmailNfe" />
+                <ScalarProperty Name="cPhone" ColumnName="cPhone" />
+                <ScalarProperty Name="cMobile" ColumnName="cMobile" />
+                <ScalarProperty Name="cGroupCustomer" ColumnName="cGroupCustomer" />
+                <ScalarProperty Name="cCodeTrilha" ColumnName="cCodeTrilha" />
+                <ScalarProperty Name="cGroupSegmento" ColumnName="cGroupSegmento" />
+                <ScalarProperty Name="cSegmento" ColumnName="cSegmento" />
+                <ScalarProperty Name="cGroupCentralizing" ColumnName="cGroupCentralizing" />
+                <ScalarProperty Name="cStreet" ColumnName="cStreet" />
+                <ScalarProperty Name="cNumber" ColumnName="cNumber" />
+                <ScalarProperty Name="cNeighborhood" ColumnName="cNeighborhood" />
+                <ScalarProperty Name="cComplement" ColumnName="cComplement" />
+                <ScalarProperty Name="lZipCode" ColumnName="lZipCode" />
+                <ScalarProperty Name="cState" ColumnName="cState" />
+                <ScalarProperty Name="cCity" ColumnName="cCity" />
+                <ScalarProperty Name="lDischargingSmoke" ColumnName="lDischargingSmoke" />
+                <ScalarProperty Name="iDischargingCustomer" ColumnName="iDischargingCustomer" />
+                <ScalarProperty Name="iPaletizado" ColumnName="iPaletizado" />
+                <ScalarProperty Name="dBirth" ColumnName="dBirth" />
+                <ScalarProperty Name="cFunctionPartner" ColumnName="cFunctionPartner" />
+                <ScalarProperty Name="cCustomerSAP" ColumnName="cCustomerSAP" />
+                <ScalarProperty Name="cUser" ColumnName="cUser" />
+                <ScalarProperty Name="cSuframa" ColumnName="cSuframa" />
+                <ScalarProperty Name="cRegistrationCity" ColumnName="cRegistrationCity" />
+                <ScalarProperty Name="cFile" ColumnName="cFile" />
+                <ScalarProperty Name="cReturnMessage" ColumnName="cReturnMessage" />
+                <ScalarProperty Name="xTypeReceiving" ColumnName="xTypeReceiving" />
+                <ScalarProperty Name="cContacteName" ColumnName="cContacteName" />
+                <ScalarProperty Name="cLastNameContact" ColumnName="cLastNameContact" />
+                <ScalarProperty Name="cOffice" ColumnName="cOffice" />
+                <ScalarProperty Name="cContactEmail" ColumnName="cContactEmail" />
+                <ScalarProperty Name="cDepartment" ColumnName="cDepartment" />
+                <ScalarProperty Name="dLastUpdate" ColumnName="dLastUpdate" />
+                <ScalarProperty Name="dReturnSync" ColumnName="dReturnSync" />
+                <ScalarProperty Name="mc1Enabled" ColumnName="mc1Enabled" />
+                <ScalarProperty Name="mc1LastUpdate" ColumnName="mc1LastUpdate" />
+                <ScalarProperty Name="cContactPhone" ColumnName="cContactPhone" />
+                <ScalarProperty Name="cContactMobile" ColumnName="cContactMobile" />
+                <ScalarProperty Name="cIdCustomerProspect" ColumnName="cIdCustomerProspect" />
+                <ScalarProperty Name="dRelationshipSync" ColumnName="dRelationshipSync" />
+                <ScalarProperty Name="nValueCreditLimitVC" ColumnName="nValueCreditLimitVC" />
+                <ScalarProperty Name="nCreditLimitVC" ColumnName="nCreditLimitVC" />
+                <ScalarProperty Name="cIDCompany" ColumnName="cIDCompany" />
+                <ScalarProperty Name="cUserSales" ColumnName="cUserSales" />
+                <ScalarProperty Name="cIdUserSubstitute" ColumnName="cIdUserSubstitute" />
+                <ScalarProperty Name="dMigrationSap" ColumnName="dMigrationSap" />
+                <ScalarProperty Name="mc1RowVersion" ColumnName="mc1RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MC1_Tracking">
+            <EntityTypeMapping TypeName="BOWTMVOTORANTIMModel.MC1_Tracking">
+              <MappingFragment StoreEntitySet="MC1_Tracking">
+                <ScalarProperty Name="mc1RowVersion" ColumnName="mc1RowVersion" />
+                <ScalarProperty Name="cSource" ColumnName="cSource" />
+                <ScalarProperty Name="nVersion" ColumnName="nVersion" />
+                <ScalarProperty Name="xIDSurvey" ColumnName="xIDSurvey" />
+                <ScalarProperty Name="cIDOrder" ColumnName="cIDOrder" />
+                <ScalarProperty Name="cIDCustomer" ColumnName="cIDCustomer" />
+                <ScalarProperty Name="mc1LastUpdate" ColumnName="mc1LastUpdate" />
+                <ScalarProperty Name="mc1Enabled" ColumnName="mc1Enabled" />
+                <ScalarProperty Name="cValues" ColumnName="cValues" />
+                <ScalarProperty Name="cUpdatedTables" ColumnName="cUpdatedTables" />
+                <ScalarProperty Name="nLongitude" ColumnName="nLongitude" />
+                <ScalarProperty Name="nLatitude" ColumnName="nLatitude" />
+                <ScalarProperty Name="cType" ColumnName="cType" />
+                <ScalarProperty Name="dCreated" ColumnName="dCreated" />
+                <ScalarProperty Name="cIDTracking" ColumnName="cIDTracking" />
+                <ScalarProperty Name="cIDUser" ColumnName="cIDUser" />
+                <ScalarProperty Name="cIDCompany" ColumnName="cIDCompany" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
