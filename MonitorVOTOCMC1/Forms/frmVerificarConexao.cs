@@ -21,40 +21,54 @@ namespace MonitorVOTOCMC1.Forms
         public frmVerificarConexao()
         {
             InitializeComponent();
-            VerificarConexao();
+            progressBar1.Value = 25;
+            timer2.Enabled = true;
         }
 
         private void VerificarConexao()
         {
+            timer2.Enabled = false;
             _db = new MC1BOWTMVOTORANTIMDatabase();
             _wslogdb = new MC1WSLOGDatabase();
 
             if (_db.VerificarConexao())
             {
                 imgDatabase.Image = Properties.Resources.green_circle_icon;
+                progressBar1.Value = 50;
             }
             else
             {
                 imgDatabase.Image = Properties.Resources.red_circle_icon;
+                progressBar1.Value = 50;
             }
 
             if (_wslogdb.VerificarConexao())
             {
                 imgDataBaseETL.Image = Properties.Resources.green_circle_icon;
+                progressBar1.Value = 100;
             }
             else
             {
                 imgDataBaseETL.Image = Properties.Resources.red_circle_icon;
+                progressBar1.Value = 100;
             }
-
-            progressBar1.Value = 100;
+            
             lblStatus.Text = "Concluido";
-            timer1.Enabled = true;
+            btnFechar.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
+        {           
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
         {
-            this.Hide();
+            VerificarConexao();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

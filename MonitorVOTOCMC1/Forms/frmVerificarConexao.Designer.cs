@@ -32,19 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerificarConexao));
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkGitHub = new System.Windows.Forms.LinkLabel();
-            this.imgGitHub = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imgDataBaseETL = new System.Windows.Forms.PictureBox();
             this.imgDatabase = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.imgGitHub = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnFechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgGitHub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDataBaseETL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDatabase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGitHub)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,17 +70,6 @@
             this.linkGitHub.TabIndex = 6;
             this.linkGitHub.TabStop = true;
             this.linkGitHub.Text = "GitHub";
-            // 
-            // imgGitHub
-            // 
-            this.imgGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgGitHub.Image = ((System.Drawing.Image)(resources.GetObject("imgGitHub.Image")));
-            this.imgGitHub.Location = new System.Drawing.Point(7, 1);
-            this.imgGitHub.Name = "imgGitHub";
-            this.imgGitHub.Size = new System.Drawing.Size(24, 21);
-            this.imgGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgGitHub.TabIndex = 5;
-            this.imgGitHub.TabStop = false;
             // 
             // panelMain
             // 
@@ -128,6 +119,11 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Database ETL";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // imgDataBaseETL
             // 
             this.imgDataBaseETL.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -150,10 +146,35 @@
             this.imgDatabase.TabIndex = 7;
             this.imgDatabase.TabStop = false;
             // 
-            // timer1
+            // imgGitHub
             // 
-            this.timer1.Interval = 3000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.imgGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgGitHub.Image = ((System.Drawing.Image)(resources.GetObject("imgGitHub.Image")));
+            this.imgGitHub.Location = new System.Drawing.Point(7, 1);
+            this.imgGitHub.Name = "imgGitHub";
+            this.imgGitHub.Size = new System.Drawing.Size(24, 21);
+            this.imgGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgGitHub.TabIndex = 5;
+            this.imgGitHub.TabStop = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Enabled = false;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnFechar.Location = new System.Drawing.Point(108, 284);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(88, 30);
+            this.btnFechar.TabIndex = 25;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // frmVerificarConexao
             // 
@@ -161,6 +182,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(301, 368);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.imgDataBaseETL);
             this.Controls.Add(this.imgDatabase);
             this.Controls.Add(this.label3);
@@ -175,9 +197,9 @@
             this.Text = "frmVerificarConexao";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgGitHub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDataBaseETL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgDatabase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGitHub)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +218,7 @@
         private System.Windows.Forms.PictureBox imgDatabase;
         private System.Windows.Forms.PictureBox imgDataBaseETL;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button btnFechar;
     }
 }

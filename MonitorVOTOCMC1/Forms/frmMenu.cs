@@ -113,12 +113,12 @@ namespace MonitorVOTOCMC1.Forms
 
         private void btnAbrirMonitor_MouseEnter(object sender, EventArgs e)
         {
-            btnAbrirXML.ForeColor = Color.Cyan;
+            btnAbrirMonitor.ForeColor = Color.Cyan;
         }
 
         private void btnAbrirMonitor_MouseLeave(object sender, EventArgs e)
         {
-            btnAbrirXML.ForeColor = Color.White;
+            btnAbrirMonitor.ForeColor = Color.White;
         }
         #endregion
 
