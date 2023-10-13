@@ -37,7 +37,6 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imgDataBaseETL = new System.Windows.Forms.PictureBox();
             this.imgDatabase = new System.Windows.Forms.PictureBox();
             this.imgGitHub = new System.Windows.Forms.PictureBox();
@@ -118,11 +117,6 @@
             this.label3.Size = new System.Drawing.Size(111, 21);
             this.label3.TabIndex = 23;
             this.label3.Text = "Database ETL";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 3000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // imgDataBaseETL
             // 
@@ -217,7 +211,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox imgDatabase;
         private System.Windows.Forms.PictureBox imgDataBaseETL;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button btnFechar;
     }
