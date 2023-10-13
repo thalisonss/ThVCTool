@@ -113,6 +113,16 @@ namespace MonitorVOTOCMC1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap project_icon {
+            get {
+                object obj = ResourceManager.GetObject("project_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap red_circle_icon {
             get {
                 object obj = ResourceManager.GetObject("red-circle-icon", resourceCulture);

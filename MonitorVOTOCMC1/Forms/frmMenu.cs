@@ -90,17 +90,11 @@ namespace MonitorVOTOCMC1.Forms
         {
             System.Diagnostics.Process.Start(target);
         }
-        #endregion
-
-        #region | FUNÇÕES |
-
-        
-        #endregion
 
         private void btnConfigurar_Click(object sender, EventArgs e)
         {
             frmConfigurar tela = new frmConfigurar();
-            tela.Show();  
+            tela.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -108,5 +102,32 @@ namespace MonitorVOTOCMC1.Forms
             frmConfigurar tela = new frmConfigurar();
             tela.Show();
         }
+
+        private void btnAbrirXML_MouseEnter(object sender, EventArgs e)
+        {
+            btnAbrirXML.ForeColor = Color.Cyan;
+        }
+
+        private void btnAbrirXML_MouseLeave(object sender, EventArgs e)
+        {
+            btnAbrirXML.ForeColor = Color.White;
+        }
+
+        private void btnAbrirMonitor_MouseEnter(object sender, EventArgs e)
+        {
+            btnAbrirXML.ForeColor = Color.Cyan;
+        }
+
+        private void btnAbrirMonitor_MouseLeave(object sender, EventArgs e)
+        {
+            btnAbrirXML.ForeColor = Color.White;
+        }
+        #endregion
+
+        #region | FUNÇÕES |
+
+
+        #endregion
+
     }
 }

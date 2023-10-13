@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnAbrirXML = new System.Windows.Forms.Button();
             this.btnAbrirMonitor = new System.Windows.Forms.Button();
@@ -35,17 +36,20 @@
             this.linkGitHub = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgGitHub = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgClose = new System.Windows.Forms.PictureBox();
             this.panelMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgGitHub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgClose)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.Black;
+            this.panelMain.Controls.Add(this.pictureBox2);
             this.panelMain.Controls.Add(this.imgClose);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
@@ -60,26 +64,30 @@
             this.btnAbrirXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbrirXML.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrirXML.ForeColor = System.Drawing.Color.White;
-            this.btnAbrirXML.Location = new System.Drawing.Point(39, 110);
+            this.btnAbrirXML.Location = new System.Drawing.Point(39, 120);
             this.btnAbrirXML.Name = "btnAbrirXML";
             this.btnAbrirXML.Size = new System.Drawing.Size(86, 56);
-            this.btnAbrirXML.TabIndex = 3;
+            this.btnAbrirXML.TabIndex = 0;
             this.btnAbrirXML.Text = "XML";
             this.btnAbrirXML.UseVisualStyleBackColor = true;
             this.btnAbrirXML.Click += new System.EventHandler(this.btnAbrirXML_Click);
+            this.btnAbrirXML.MouseEnter += new System.EventHandler(this.btnAbrirXML_MouseEnter);
+            this.btnAbrirXML.MouseLeave += new System.EventHandler(this.btnAbrirXML_MouseLeave);
             // 
             // btnAbrirMonitor
             // 
             this.btnAbrirMonitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbrirMonitor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAbrirMonitor.ForeColor = System.Drawing.Color.White;
-            this.btnAbrirMonitor.Location = new System.Drawing.Point(179, 111);
+            this.btnAbrirMonitor.Location = new System.Drawing.Point(179, 121);
             this.btnAbrirMonitor.Name = "btnAbrirMonitor";
             this.btnAbrirMonitor.Size = new System.Drawing.Size(86, 56);
-            this.btnAbrirMonitor.TabIndex = 4;
+            this.btnAbrirMonitor.TabIndex = 1;
             this.btnAbrirMonitor.Text = "Monitor";
             this.btnAbrirMonitor.UseVisualStyleBackColor = true;
             this.btnAbrirMonitor.Click += new System.EventHandler(this.btnAbrirMonitor_Click);
+            this.btnAbrirMonitor.MouseEnter += new System.EventHandler(this.btnAbrirMonitor_MouseEnter);
+            this.btnAbrirMonitor.MouseLeave += new System.EventHandler(this.btnAbrirMonitor_MouseLeave);
             // 
             // panel1
             // 
@@ -99,7 +107,7 @@
             this.linkGitHub.Location = new System.Drawing.Point(35, 5);
             this.linkGitHub.Name = "linkGitHub";
             this.linkGitHub.Size = new System.Drawing.Size(40, 13);
-            this.linkGitHub.TabIndex = 6;
+            this.linkGitHub.TabIndex = 0;
             this.linkGitHub.TabStop = true;
             this.linkGitHub.Text = "GitHub";
             this.linkGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGitHub_LinkClicked);
@@ -108,7 +116,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::MonitorVOTOCMC1.Properties.Resources.config_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(260, 64);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,6 +135,17 @@
             this.imgGitHub.TabIndex = 5;
             this.imgGitHub.TabStop = false;
             this.imgGitHub.Click += new System.EventHandler(this.imgGitHub_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::MonitorVOTOCMC1.Properties.Resources.project_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // imgClose
             // 
@@ -152,6 +171,7 @@
             this.Controls.Add(this.btnAbrirXML);
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
@@ -160,6 +180,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgGitHub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgClose)).EndInit();
             this.ResumeLayout(false);
 
@@ -175,5 +196,6 @@
         private System.Windows.Forms.LinkLabel linkGitHub;
         private System.Windows.Forms.PictureBox imgGitHub;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

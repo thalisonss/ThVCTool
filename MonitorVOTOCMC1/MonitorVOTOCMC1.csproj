@@ -282,6 +282,7 @@
     <None Include="Resource\config_icon.png" />
     <None Include="Resource\red-circle-icon.png" />
     <None Include="Resource\green-circle-icon.png" />
+    <None Include="Resource\project_icon.png" />
     <Content Include="Resource\refresh-icon.png" />
     <Content Include="Resource\sheets-icon.png" />
   </ItemGroup>
