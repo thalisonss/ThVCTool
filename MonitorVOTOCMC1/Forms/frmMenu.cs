@@ -19,8 +19,6 @@ namespace MonitorVOTOCMC1.Forms
         public frmMenu()
         {
             InitializeComponent();
-           
-
         }
 
         #region | VARIAVEIS |
